@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.bch1212/injectshield",
+  "description": "Prompt-injection firewall MCP for AI agents — scan text/URLs with heuristic rules and managed API enforcement.",
+  "version": "0.1.4",
+  "repository": {
+    "url": "https://github.com/bch1212/injectshield",
+    "source": "github"
+  },
+  "websiteUrl": "https://injectshield.dev",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@injectshield/mcp",
+      "version": "0.1.4",
+      "transport": {"type": "stdio"},
+      "environmentVariables": [
+        {"name": "INJECTSHIELD_API_KEY", "description": "InjectShield API key for managed scanning.", "isRequired": true, "isSecret": true},
+        {"name": "INJECTSHIELD_API_URL", "description": "Override API base URL. Defaults to https://api.injectshield.dev.", "isRequired": false}
+      ]
+    }
+  ]
+}
